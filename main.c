@@ -87,9 +87,9 @@ void tick()
 		{
 			uint8_t limits = 0;
 			if (east_position != POSITION_CLOSED)
-				limits |= 1;
-			if (west_position != POSITION_CLOSED)
 				limits |= 2;
+			if (west_position != POSITION_CLOSED)
+				limits |= 1;
 			usb_write('0' + limits);
 			break;
 		}
